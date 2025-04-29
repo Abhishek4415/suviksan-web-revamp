@@ -43,7 +43,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/suviksan-web-revamp">
           <Routes>
             <Route path="/" element={<Index />} />
             
