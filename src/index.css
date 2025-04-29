@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Add this to your global CSS or Tailwind config */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+@layer base {
+  :root {
+    --background: 210 33% 99%;
+    --foreground: 210 40% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 10%;
+
+    --primary: 201 98% 32%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 186 100% 33%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 30% 45%;
+
+    --accent: 186 70% 94%;
+    --accent-foreground: 201 98% 32%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 201 98% 32%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 40% 3%;
+    --foreground: 210 20% 98%;
+
+    --card: 210 40% 6%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 210 40% 6%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 201 98% 32%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 186 100% 33%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 210 40% 12%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 186 70% 15%;
+    --accent-foreground: 186 70% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 210 40% 20%;
+    --input: 210 40% 20%;
+    --ring: 201 98% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container px-4 sm:px-6 lg:px-8;
+  }
+  
+  .heading-xl {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+  }
+  
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+  
+  .heading-md {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+  
+  .heading-sm {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+  
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+
+  .feature-card {
+    @apply bg-white rounded-xl p-6 shadow-md transition-all duration-300
+           hover:shadow-lg hover:-translate-y-1 border border-border;
+  }
+
+  .service-card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300
+           hover:shadow-lg hover:-translate-y-1 border border-border relative;
+  }
+}
+
+/* Hide scrollbar but allow scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* Add this CSS in your global CSS file like index.css or tailwind.css */
+::-webkit-scrollbar {
+  display: none;
+}
